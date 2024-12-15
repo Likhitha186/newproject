@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Email Validation</title>
+  <style>
+    body{
+      background-color: rgb(18, 17, 17);
+      counter-reset: white;
+}
+.container{
+  color: white;
+}
+    
+  </style>
+  <body>
+    <div class="container">
+    <form>
+      <label for="name">Name</label>
+      <input type="text" value="Likhitha C" />
+      <br><br>
+      <label for="email">Enter your email:</label>
+      <br><br>
+      <input type="email" id="email" name="email" required placeholder="example@example.com">
+      <br><br>
+      <script>
+        
+      <input type="button" onclick="validE(e)" value="Display" />
+      {
+
+      function validE(e) {
+  const patt = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return patt.test(e);
+}
+
+const e = "example@example.com";
+if (validE(e)) {
+  console.log("Valid email address");
+} else {
+  console.log("Invalid email address");
+}
+      }
+</script>
+<br><br>
+      <textarea placeholder="Message Fields"></textarea>
+      <br></br>
+      <button onclick="display()">Submit</button>
+    </form>
+    <script>
+     function display()
+     {
+      alert("Thank you");
+     }
+    </script>
+  </body>
+</html>
